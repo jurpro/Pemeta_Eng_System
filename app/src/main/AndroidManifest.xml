@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ujanglukmanbdg.pemeta">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +20,51 @@
         android:theme="@style/Theme.PemetaEngineeringSystem"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.detail.experience.ListExperienceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.personil.DetailPersonilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.profile.CompanyProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.maps.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".ui.detail.experience.DetailExperienceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.sistempemeta.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.sistempemeta.DashboardSistemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.LandingPageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_landing_page" />
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +72,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
