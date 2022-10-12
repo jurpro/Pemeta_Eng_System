@@ -1,0 +1,179 @@
+﻿{
+  "dependencies": {
+    "activity_company_profile": [
+      "header_company_profile",
+      "detail_experience"
+    ],
+    "activity_detail_experience": [
+      "header_experience",
+      "detail_experience"
+    ],
+    "activity_detail_personil": [
+      "header_detail_personil"
+    ],
+    "activity_landing_page": [
+      "app_bar_main"
+    ],
+    "app_bar_main": [
+      "content_main"
+    ],
+    "fragment_home": [
+      "menu_front_pemeta",
+      "menu_front_address"
+    ]
+  },
+  "class_names_log": {
+    "mappings": {
+      "activity_company_profile": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityCompanyProfileBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_dashboard_sistem": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityDashboardSistemBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_detail_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityDetailExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_detail_personil": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityDetailPersonilBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_landing_page": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityLandingPageBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_list_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityListExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_login": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityLoginBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_main": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityMainBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_maps": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityMapsBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_splash_screen": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivitySplashScreenBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "activity_welcome": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ActivityWelcomeBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "app_bar_main": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.AppBarMainBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "content_main": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ContentMainBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "detail_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.DetailExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "detail_list_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.DetailListExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "fragment_dashboard": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.FragmentDashboardBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "fragment_direksi": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.FragmentDireksiBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "fragment_home": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.FragmentHomeBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "fragment_locations": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.FragmentLocationsBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "header_company_profile": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.HeaderCompanyProfileBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "header_detail_personil": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.HeaderDetailPersonilBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "header_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.HeaderExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "item_list_experience": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.ItemListExperienceBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "menu_front_address": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.MenuFrontAddressBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      },
+      "menu_front_pemeta": {
+        "qualified_name": "com.ujanglukmanbdg.pemeta.databinding.MenuFrontPemetaBinding",
+        "module_package": "com.ujanglukmanbdg.pemeta.databinding",
+        "variables": {},
+        "implementations": []
+      }
+    }
+  }
+}
