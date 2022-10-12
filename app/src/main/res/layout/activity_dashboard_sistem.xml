@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pemeta_hut_ri_77_resize"
+    tools:context=".ui.sistempemeta.DashboardSistemActivity">
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_absensi"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/sistem_pemeta_absen"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_harian"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_lapor_hari"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_absensi"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_absensi"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_absensi" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_bulan"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_lapor_bulan"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_harian"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_harian"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_harian" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_triwulan"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_lapor_triwulan"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_bulan"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_bulan"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_bulan" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_surat"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_request_surat"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_triwulan"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_triwulan"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_triwulan" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_cetak"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_cetak"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_surat"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_surat"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_surat" />
+
+    <TextView
+        android:id="@+id/sistem_pemeta_dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/sistem_pemeta_name"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="28sp"
+        android:fontFamily="@font/asap_condensed_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_cetak" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/sistem_pemeta_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/sistem_pemeta_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_dashboard_back"
+        app:layout_constraintEnd_toStartOf="@id/sistem_pemeta_dashboard_logout"/>
+
+    <Button
+        android:id="@+id/sistem_pemeta_dashboard_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/sistem_pemeta_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_dashboard_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

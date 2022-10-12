@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:cardCornerRadius="28dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="75dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ui.direksi.DireksiFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="189dp" />
+
+        <ImageView
+            android:id="@+id/direksi_photo_dirut"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/direksi_direktur_utama_jabatan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/direksi_title"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/direksi_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toTopOf="@id/direksi_photo_dirut" />
+
+        <TextView
+            android:id="@+id/direksi_dirut_quote"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/direksi_direktur_utama_quote"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/direksi_title" />
+
+        <!--
+        <TextView
+            android:id="@+id/direksi_dirut_paragraf_1"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/direksi_direktur_utama_paragraf_1"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/direksi_dirut_quote" />
+
+        <TextView
+            android:id="@+id/direksi_dirut_paragraf_2"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/direksi_direktur_utama_paragraf_2"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/direksi_dirut_paragraf_1" /> -->
+
+        <TextView
+            android:id="@+id/direksi_dirut_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direksi_direktur_utama_jabatan"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/direksi_dirut_nama"
+            app:layout_constraintEnd_toEndOf="@id/direksi_photo_dirut"
+            app:layout_constraintStart_toStartOf="@id/direksi_photo_dirut" />
+
+        <TextView
+            android:id="@+id/direksi_dirut_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/direksi_direktur_utama_nama"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/direksi_photo_dirut"
+            app:layout_constraintEnd_toEndOf="@id/direksi_photo_dirut"
+            app:layout_constraintStart_toStartOf="@id/direksi_photo_dirut" />
+
+        <ImageView
+            android:id="@+id/direksi_binder_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/direksi_direktur_utama_jabatan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/direksi_photo_dirut"
+            tools:srcCompat="@drawable/binder_alamat" />
+
+        <ImageView
+            android:id="@+id/direksi_direktur_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/direksi_direktur_jabatan"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/direksi_binder_alamat"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/direksi_direktur_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direksi_direktur_nama"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/direksi_direktur_photo"
+            app:layout_constraintStart_toStartOf="@id/direksi_direktur_photo"
+            app:layout_constraintTop_toBottomOf="@id/direksi_direktur_photo" />
+
+        <TextView
+            android:id="@+id/direksi_direktur_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/direksi_direktur_jabatan"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/direksi_direktur_nama"
+            app:layout_constraintStart_toStartOf="@id/direksi_direktur_nama"
+            app:layout_constraintEnd_toEndOf="@id/direksi_direktur_nama"/>
+
+        <ImageView
+            android:id="@+id/direksi_komisaris_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/direksi_komisaris_jabatan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toTopOf="@id/direksi_direktur_photo"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/direksi_komisaris_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direksi_komisaris_nama"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/direksi_komisaris_photo"
+            app:layout_constraintStart_toStartOf="@id/direksi_komisaris_photo"
+            app:layout_constraintTop_toBottomOf="@id/direksi_komisaris_photo" />
+
+        <TextView
+            android:id="@+id/direksi_komisaris_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/direksi_komisaris_jabatan"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/direksi_komisaris_nama"
+            app:layout_constraintStart_toStartOf="@id/direksi_komisaris_nama"
+            app:layout_constraintEnd_toEndOf="@id/direksi_komisaris_nama"/>
+
+        <ImageView
+            android:id="@+id/direksi_pjtbu_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/direksi_pjtbu_jabatan"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/direksi_direktur_jabatan"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/direksi_pjtbu_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direksi_pjtbu_nama"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/direksi_pjtbu_photo"
+            app:layout_constraintStart_toStartOf="@id/direksi_pjtbu_photo"
+            app:layout_constraintTop_toBottomOf="@id/direksi_pjtbu_photo" />
+
+        <TextView
+            android:id="@+id/direksi_pjtbu_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/direksi_pjtbu_jabatan"
+            android:textSize="12sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/direksi_pjtbu_nama"
+            app:layout_constraintStart_toStartOf="@id/direksi_pjtbu_nama"
+            app:layout_constraintEnd_toEndOf="@id/direksi_pjtbu_nama"/>
+
+        <ImageView
+            android:id="@+id/direksi_pjskbu_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/direksi_pjskbu_jabatan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/direksi_komisaris_jabatan"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/direksi_pjskbu_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/direksi_pjskbu_nama"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/direksi_pjskbu_photo"
+            app:layout_constraintStart_toStartOf="@id/direksi_pjskbu_photo"
+            app:layout_constraintTop_toBottomOf="@id/direksi_pjskbu_photo" />
+
+        <TextView
+            android:id="@+id/direksi_pjskbu_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/direksi_pjskbu_jabatan"
+            android:textSize="12sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/direksi_pjskbu_nama"
+            app:layout_constraintStart_toStartOf="@id/direksi_pjskbu_nama"
+            app:layout_constraintEnd_toEndOf="@id/direksi_pjskbu_nama"/>
+
+        <TextView
+            android:id="@+id/direksi_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome_version"
+            android:textSize="12sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

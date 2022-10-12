@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/slide2"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="none">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/home_slideshow_1"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintEnd_toStartOf="@id/home_slideshow_2"
+            android:layout_marginEnd="0dp" />
+        <Constraint
+            android:id="@+id/menu1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintEnd_toStartOf="@+id/menu2"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_2"
+            motion:layout_constraintStart_toEndOf="@id/home_slideshow_1"
+            android:layout_marginStart="8dp" />
+        <Constraint
+            android:layout_height="170dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            motion:layout_constraintStart_toEndOf="@+id/home_slideshow_2"
+            android:id="@+id/home_slideshow_3" />
+        <Constraint
+            android:layout_height="170dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            motion:layout_constraintStart_toEndOf="parent"
+            android:id="@+id/home_slideshow_4" />
+        <Constraint
+            android:id="@+id/menu2"
+            motion:layout_constraintEnd_toStartOf="@+id/menu3"
+            motion:layout_constraintStart_toEndOf="@+id/menu1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu1"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu1">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/menu3"
+            motion:layout_constraintEnd_toStartOf="@+id/menu4"
+            motion:layout_constraintStart_toEndOf="@+id/menu2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu2"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu2">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/menu4"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/menu3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu3"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toTopOf="@+id/menu3">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/home_our_client"
+            motion:layout_constraintStart_toEndOf="@id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/home_our_project" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/home_icon_menu"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/home_company"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" />
+        <Constraint android:id="@+id/include_header" />
+        <Constraint
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/include_menu_front_pemeta"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/include_menu_front_address"
+            android:layout_marginTop="16dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/slide2">
+        <Constraint
+            android:id="@+id/home_slideshow_1"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintVertical_bias="0.3" />
+        <Constraint
+            android:id="@+id/menu1"
+            motion:layout_constraintEnd_toStartOf="@id/menu2"
+            android:layout_width="26dp"
+            android:layout_height="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_2"
+            android:layout_marginTop="8dp">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_2"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintEnd_toStartOf="@id/home_slideshow_3" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@+id/menu3"
+            motion:layout_constraintStart_toEndOf="@+id/menu1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu1"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu1"
+            android:id="@+id/menu2"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp" >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/home_slideshow_3"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintStart_toEndOf="@id/home_slideshow_2"
+            android:layout_marginStart="8dp" />
+        <Constraint
+            android:id="@+id/home_slideshow_4"
+            motion:layout_constraintStart_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/home_our_project"
+            motion:layout_constraintEnd_toStartOf="@+id/home_our_client"
+            motion:layout_constraintStart_toEndOf="@id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_2"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp" />
+        <Constraint
+            android:id="@+id/home_our_client"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/home_our_project"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project" />
+        <Constraint
+            android:id="@+id/home_icon_menu"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_2"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/home_company"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_2"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_1"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/include_menu_front_pemeta"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/include_menu_front_address"
+            android:layout_marginTop="16dp" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/slide3"
+        motion:deriveConstraintsFrom="@+id/slide2" >
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_2"
+            motion:layout_constraintEnd_toStartOf="@id/home_slideshow_3"
+            android:layout_marginEnd="8dp" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_3"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintEnd_toStartOf="@id/home_slideshow_4" />
+        <Constraint
+            android:id="@+id/menu2"
+            motion:layout_constraintEnd_toStartOf="@+id/menu3"
+            motion:layout_constraintStart_toEndOf="@+id/menu1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu1"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu1"
+            motion:crossfade="0" >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/menu3"
+            motion:layout_constraintEnd_toStartOf="@+id/menu4"
+            motion:layout_constraintStart_toEndOf="@+id/menu2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu2"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu2">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/home_our_project"
+            motion:layout_constraintEnd_toStartOf="@+id/home_our_client"
+            motion:layout_constraintStart_toEndOf="@id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_3"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp" />
+        <Constraint
+            android:id="@+id/home_our_client"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/home_our_project"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_4"
+            motion:layout_constraintStart_toEndOf="@id/home_slideshow_3"
+            android:layout_marginStart="8dp" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            motion:layout_constraintVertical_bias="0.3"
+            android:id="@+id/home_slideshow_1"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp" />
+        <Constraint
+            android:id="@+id/menu1"
+            motion:layout_constraintEnd_toStartOf="@id/menu2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_3"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:crossfade="0"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/home_icon_menu"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_3"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintCircleRadius="50dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_3"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_2"
+            android:layout_marginStart="16dp"
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            android:id="@+id/home_company"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/slide2"
+        motion:constraintSetEnd="@+id/slide3"
+        motion:autoTransition="none">
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+    <ConstraintSet
+        android:id="@+id/slide4"
+        motion:deriveConstraintsFrom="@+id/slide3" >
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp"
+            android:id="@+id/home_slideshow_3"
+            motion:layout_constraintEnd_toStartOf="@id/home_slideshow_4" />
+        <Constraint
+            android:layout_height="200dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/home_slideshow_4"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/menu3"
+            motion:layout_constraintEnd_toStartOf="@+id/menu4"
+            motion:layout_constraintStart_toEndOf="@+id/menu2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu2"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu2"
+            motion:crossfade="0" >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/menu4"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/menu3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu3"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toTopOf="@+id/menu3">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/menu2"
+            motion:layout_constraintEnd_toStartOf="@+id/menu3"
+            motion:layout_constraintStart_toEndOf="@+id/menu1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/menu1"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="@+id/menu1"
+            motion:crossfade="0">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/home_our_project"
+            motion:layout_constraintEnd_toStartOf="@+id/home_our_client"
+            motion:layout_constraintStart_toEndOf="@id/home_portfolio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_4"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp" />
+        <Constraint
+            android:id="@+id/home_our_client"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/home_our_project"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            motion:layout_constraintBottom_toBottomOf="@id/home_our_project"
+            android:layout_marginStart="24dp"
+            motion:layout_constraintTop_toTopOf="@id/home_our_project" />
+        <Constraint
+            android:id="@+id/menu1"
+            motion:layout_constraintEnd_toStartOf="@id/menu2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_4"
+            android:layout_marginStart="32dp"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:crossfade="0"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_4"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintCircleRadius="50dp"
+            android:id="@+id/home_icon_menu"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_4"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/home_slideshow_3"
+            android:layout_marginStart="16dp"
+            android:id="@+id/include_menu_front_pemeta"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            android:id="@+id/home_company"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/include_menu_front_pemeta"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/slide3"
+        motion:constraintSetEnd="@+id/slide4"
+        motion:autoTransition="none">
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/slide4"
+        motion:constraintSetEnd="@+id/start"
+        motion:autoTransition="none">
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+</MotionScene>

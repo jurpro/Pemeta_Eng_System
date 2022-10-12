@@ -7,4 +7,28 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="yellow">#fff6ba00</color>
+    <color name="purple_900">#ff82008f</color>
+    <color name="purple_400">#CD87D5</color>
+
+    <color name="pink">#F06292</color>
+    <color name="navi">#2D3D4F</color>
+
+    <color name="orange_500">#EA5C2B</color>
+    <color name="orange_250">#FF7F3F</color>
+    <color name="green_orange">#F6D860</color>
+    <color name="green_light">#95CD41</color>
+    <color name="green_purple">#E7FBBE</color>
+    <color name="purple_light">#D9D7F1</color>
+    <color name="pink_purple">#FFCBCB</color>
+
+    // Color Pemeta Style
+    <color name="pemeta_primary">#3D6A00</color>
+    <color name="pemeta_secondary">#57624A</color>
+    <color name="pemeta_tertiary">#386663</color>
+    <color name="pemeta_error">#BA1A1A</color>
+    <color name="pemeta_neutral">#5E5F59</color>
+    <color name="pemeta_neutral_variant">#5C6054</color>
+
 </resources>

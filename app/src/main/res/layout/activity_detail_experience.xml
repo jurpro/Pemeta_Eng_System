@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.experience.DetailExperienceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/Theme.PemetaEngineeringSystem.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.PemetaEngineeringSystem.PopupOverlay" >
+
+                <!--
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="150dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/splash_logo_desc"
+                    android:src="@drawable/logo_pemeta_2022_biru"
+                    android:layout_gravity="center" /> -->
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/include_header_experience"
+            layout="@layout/header_experience"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_toolbar" />
+
+        <include
+            android:id="@+id/include_description_experience"
+            layout="@layout/detail_experience"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/include_header_experience"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/include_header_experience"
+            app:layout_constraintTop_toBottomOf="@+id/include_header_experience"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <TextView
+            android:id="@+id/text_copyright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/welcome_version"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/include_description_experience"
+            app:layout_constraintStart_toStartOf="@+id/include_description_experience"
+            app:layout_constraintTop_toBottomOf="@id/include_description_experience" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
