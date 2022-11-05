@@ -21,6 +21,7 @@ import com.ujanglukmanbdg.pemeta.ui.main.ViewModelFactory
 import com.ujanglukmanbdg.pemeta.ui.sistempemeta.DashboardSistemActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+@ExperimentalPagingApi
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

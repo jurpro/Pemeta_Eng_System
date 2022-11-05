@@ -6,19 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.PengalamanPemeta
 import com.ujanglukmanbdg.pemeta.data.PersonilPemeta
 import com.ujanglukmanbdg.pemeta.databinding.FragmentDireksiBinding
-import com.ujanglukmanbdg.pemeta.ui.detail.experience.DetailExperienceActivity
-import com.ujanglukmanbdg.pemeta.ui.detail.personil.DetailPersonilActivity
-import com.ujanglukmanbdg.pemeta.ui.detail.profile.CompanyProfileActivity
+import com.ujanglukmanbdg.pemeta.ui.sistempemeta.profile.DetailPersonilActivity
 import com.ujanglukmanbdg.pemeta.ui.home.ui.locations.LocationsFragment
 
 

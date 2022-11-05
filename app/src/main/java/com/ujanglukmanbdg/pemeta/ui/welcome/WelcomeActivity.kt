@@ -1,14 +1,21 @@
 package com.ujanglukmanbdg.pemeta.ui.welcome
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.paging.ExperimentalPagingApi
 import com.ujanglukmanbdg.pemeta.databinding.ActivityWelcomeBinding
 import com.ujanglukmanbdg.pemeta.ui.home.LandingPageActivity
 import com.ujanglukmanbdg.pemeta.ui.main.MainActivity
 import com.ujanglukmanbdg.pemeta.ui.sistempemeta.DashboardSistemActivity
 import com.ujanglukmanbdg.pemeta.ui.sistempemeta.login.LoginActivity
 
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+@ExperimentalPagingApi
 class WelcomeActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityWelcomeBinding
