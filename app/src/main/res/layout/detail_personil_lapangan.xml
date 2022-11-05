@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_viewSearch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardBackgroundColor="@color/material_dynamic_secondary90"
+    android:elevation="14dp"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="125dp" />
+
+        <TextView
+            android:id="@+id/personil_detail_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/detail_personil_alamat"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/personil_detail_alamat_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_alamat"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_alamat" />
+
+        <TextView
+            android:id="@+id/personil_detail_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_email"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_alamat_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_email_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_email"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_email" />
+
+        <TextView
+            android:id="@+id/personil_detail_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_contact"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_email_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_contact_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_contact"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_contact" />
+
+        <TextView
+            android:id="@+id/personil_detail_penempatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_penempatan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_contact_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_penempatan_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_penempatan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_penempatan" />
+
+        <TextView
+            android:id="@+id/personil_detail_satker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_satker"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_penempatan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_satker_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_satker"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_satker" />
+
+        <TextView
+            android:id="@+id/personil_detail_pekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_pekerjaan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_satker_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_pekerjaan_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            app:flow_verticalAlign="top"
+            android:text="@string/detail_personil_pekerjaan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_pekerjaan" />
+
+        <TextView
+            android:id="@+id/personil_detail_perusahaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_perusahaan_rekanan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_pekerjaan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_perusahaan_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_perusahaan_rekanan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_perusahaan" />
+
+        <TextView
+            android:id="@+id/personil_detail_mobilisasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_mobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_perusahaan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_mobilisasi_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_mobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_mobilisasi" />
+
+        <TextView
+            android:id="@+id/personil_detail_demobilisasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_demobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_mobilisasi_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_demobilisasi_teks"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_demobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_demobilisasi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

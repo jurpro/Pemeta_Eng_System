@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pawel_czerwinski_02_litle"
+    tools:context=".ui.sistempemeta.absen.AbsensiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/absensi_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.PemetaEngineeringSystem.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/material_dynamic_primary60"
+            app:popupTheme="@style/Theme.PemetaEngineeringSystem.PopupOverlay" >
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/absensi_logo_pemeta"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_pemeta_2022_hitam"
+        android:contentDescription="@string/company_full_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/absensi_toolbar" />
+
+    <TextView
+        android:id="@+id/absensi_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company_full_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/material_dynamic_secondary10"
+        android:fontFamily="@font/asap_condensed_regular"
+        app:layout_constraintTop_toBottomOf="@id/absensi_logo_pemeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/absensi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/absensi_judul"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/pemeta_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/absensi_company_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/absensi_icon_click"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:shadowColor="@color/material_dynamic_secondary30"
+        app:cardBackgroundColor="@color/material_dynamic_primary80"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/absensi_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_absensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/sistem_pemeta_absen"
+                android:src="@drawable/ic_finger_click_svgrepo_com"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_absensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/absensi_masuk"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/material_dynamic_tertiary10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_absensi"
+                app:layout_constraintStart_toStartOf="@id/icon_absensi"
+                app:layout_constraintTop_toBottomOf="@id/icon_absensi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/absensi_jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/absensi_waktu"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/material_dynamic_tertiary10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/absensi_icon_click" />
+
+    <TextView
+        android:id="@+id/absensi_jam_hitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/absensi_waktu"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/material_dynamic_tertiary10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/absensi_jam" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/absensi_navigasi"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:shadowColor="@color/material_dynamic_secondary30"
+        app:cardBackgroundColor="@color/material_dynamic_primary90"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/absensi_sapaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/absensi_sapaan"
+                android:textSize="16sp"
+                android:textColor="@color/material_dynamic_tertiary10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/absensi_sukses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/absensi_masuk_sukses"
+                android:textSize="14sp"
+                android:textColor="@color/material_dynamic_tertiary10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/absensi_sapaan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,16 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.detail.personil.DetailPersonilActivity">
+    tools:context=".ui.sistempemeta.profile.DetailPersonilActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/detail_personil_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.PemetaEngineeringSystem.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/material_dynamic_primary50"
+            app:popupTheme="@style/Theme.PemetaEngineeringSystem.PopupOverlay" >
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        android:id="@+id/include_detail_header"
+        android:id="@+id/include_header_personil_lapangan"
         layout="@layout/header_detail_personil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/detail_personil_toolbar" />
+
+    <include
+        android:id="@+id/include_detail_personil_lapangan"
+        layout="@layout/detail_personil_lapangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_header_personil_lapangan" />
+
+    <ImageView
+        android:id="@+id/detail_logout_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/detail_personil_logout"
+        android:src="@drawable/ic_24_gnome_session_logout_svgrepo_com"
+        app:layout_constraintStart_toStartOf="@id/include_detail_personil_lapangan"
+        app:layout_constraintTop_toBottomOf="@id/include_detail_personil_lapangan" />
+
+    <TextView
+        android:id="@+id/detail_personil_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/detail_personil_logout"
+        android:textColor="@color/material_dynamic_primary40"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/detail_logout_icon"
+        app:layout_constraintStart_toEndOf="@id/detail_logout_icon"
+        app:layout_constraintTop_toTopOf="@id/detail_logout_icon" />
+
+    <TextView
+        android:id="@+id/detail_personil_copyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/welcome_version"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/include_detail_personil_lapangan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/include_detail_personil_lapangan"
+        app:layout_constraintTop_toBottomOf="@id/detail_personil_logout"
+        app:layout_constraintVertical_bias="0.775" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

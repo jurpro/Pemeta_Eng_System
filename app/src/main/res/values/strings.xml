@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Pemeta</string>
+    <string name="app_name">Pemeta Access</string>
 
     // Company Detail
     <string name="company_name">Pemeta</string>
@@ -36,9 +36,14 @@
     <string name="title_notifications">Notifikasi</string>
     <string name="title_locations">Lokasi</string>
     <string name="title_direksi">Direksi</string>
+    <string name="title_system">Pemeta Access</string>
+    <string name="title_contact">Hubungi Kami</string>
 
     // Drawer Menu
     <string name="about_us">Tentang Kami</string>
+
+    // Snackbar Test
+    <string name="snackbar_fabEmailBottom">Jika ada pertanyaan, silakan hubungi kami</string>
 
     // Home Fragment
     <string name="home_portfolio">Portfolio</string>
@@ -51,14 +56,19 @@
 
     //Dashboard Sistem
     <string name="sistem_pemeta_name">Sistem Informasi Pemeta</string>
-    <string name="sistem_pemeta_absen">Absen Harian</string>
+    <string name="sistem_pemeta_absen">Absen</string>
+    <string name="sistem_pemeta_upload">Upload</string>
+    <string name="sistem_pemeta_cek_upload">Lihat</string>
+    <string name="sistem_pemeta_penugasan">Pekerjaan</string>
+    <string name="sistem_pemeta_profile">Profil</string>
+    <string name="sistem_pemeta_home">Beranda</string>
+
     <string name="sistem_pemeta_lapor_hari">Laporan Harian</string>
     <string name="sistem_pemeta_lapor_bulan">Laporan Bulanan</string>
     <string name="sistem_pemeta_lapor_triwulan">Laporan Triwulan</string>
     <string name="sistem_pemeta_request_surat">Permohonan Surat</string>
     <string name="sistem_pemeta_cetak">Cetak Laporan</string>
     <string name="sistem_pemeta_back">Kembali</string>
-    <string name="sistem_pemeta_home">Beranda</string>
     <string name="sistem_pemeta_login">Login</string>
     <string name="sistem_pemeta_logout">Logout</string>
 
@@ -219,6 +229,17 @@
     <string name="direksi_pjskbu_jabatan">Penanggung Jawab Sub Klasifikasi\nPJSK BU RK003</string>
 
     // Detail Personil Activity
+    <string name="detail_personil_alamat">Alamat Domisili:</string>
+    <string name="detail_personil_email">Alamat Email:</string>
+    <string name="detail_personil_contact">Nomor Handphone:</string>
+    <string name="detail_personil_penempatan">Wilayah Penempatan:</string>
+    <string name="detail_personil_satker">Satker:</string>
+    <string name="detail_personil_pekerjaan">Pekerjaan:</string>
+    <string name="detail_personil_perusahaan_rekanan">Perusahaan:</string>
+    <string name="detail_personil_mobilisasi">Mobilisasi Sejak:</string>
+    <string name="detail_personil_demobilisasi">Jadwal Demobilisasi:</string>
+    <string name="detail_personil_logout"> Keluar </string>
+
     <string name="detail_personil_title">DETAIL PERSONIL</string>
     <string name="detail_personil_name">Nama Personil</string>
     <string name="detail_personil_photo">Photo Personil</string>
@@ -308,9 +329,22 @@
     <string name="detail_pjskbu_paragraph3">Paragraf 3 => Surya Azan</string>
     <string name="detail_pjskbu_connect">Connect With us at LinkedIn</string>
 
+    // Dummy Personil Lapangan
+    <string name="detail_personil_lapangan_nama">Lukmanul Hakim</string>>
+    <string name="detail_personil_lapangan_jabatan">Site Engineer</string>
+    <string name="detail_personil_lapangan_alamat">Jl. Terusan Pesantren Blk 76 Arcamanik Bandung</string>
+    <string name="detail_personil_lapangan_email">ujanglukmanbdg@gmail.com</string>
+    <string name="detail_personil_lapangan_contact">0811888877779</string>
+    <string name="detail_personil_lapangan_penempatan">Kab. Tasikmalaya dan Kab. Kab. Garut Prov. Jawa Barat</string>
+    <string name="detail_personil_lapangan_satker">P2JN Prov. Jawa Barat</string>
+    <string name="detail_personil_lapangan_pekerjaan">PW 18–2022, Pengawasan Teknis Penggantian Jembatan Cilangla Cs</string>
+    <string name="detail_personil_lapangan_perusahaan">PT. Pemeta Engineering System KSO PT. Seecons PT. Jasa Mitra Manunggal</string>
+    <string name="detail_personil_lapangan_mobilisasi">15 Desember 2022</string>
+    <string name="detail_personil_lapangan_demobilisasi">24 Mei 2024</string>
 
     // List Pengalaman 10 Tahun Terakhir
     <string name="list_pengalaman_title">Pengalaman Perusahaan 10 Tahun terakhir</string>
+    <string name="list_pengalaman_description">Berikut ini daftar pengalaman perusahaan 10 tahun terakhir yang telah dilaksanakan oleh PT. Pemeta Engineering System. </string>
 
     <string name="year_pengalaman">Tahun Pelaksanaan</string>
     <string name="list_pengalaman_2022">Tahun 2022</string>
@@ -758,6 +792,58 @@
 
     // Data untuk Company Profile
     <string name="company_profile_title">Our Profile</string>
+
+    // Absensi
+    <string name="absensi_judul">Absensi Karyawan</string>
+    <string name="absensi_tanggal">Date</string>
+    <string name="absensi_waktu">Waktu</string>
+    <string name="absensi_nama">Nama Lengkap</string>
+    <string name="absensi_masuk">Absen Masuk</string>
+    <string name="absensi_pulang">Absen Pulang</string>
+
+    <string name="absensi_back">Kembali</string>
+    <string name="absensi_activity">Pekerjaan</string>
+    <string name="absensi_profile">Profile</string>
+
+    <string name="absensi_sapaan">Selamat datang <b>Lukmanul Hakim</b></string>
+    <string name="absensi_masuk_sukses">Anda telah melakukan absensi masuk, silakan tekan Absen Pulang jika telah selesai bekerja hari ini.</string>
+    <string name="absensi_pulang_sukses">Anda telah melakukan absensi pulang, jangan lupa untuk melakukan absen kembali besok.</string>
+    <string name="absensi_masuk_error">Mohon untuk mengulangi absensi masuk dikarenakan kesalahan sistem.</string>
+    <string name="absensi_pulang_error">Mohon untuk mengulangi absensi pulang dikarenakan kesalahan sistem.</string>
+    <string name="absensi_belum">Anda belum melakukan tap absensi. Silakan tap Absen terlebih dahulu.</string>
+
+    // Upload Activity
+    <string name="upload_preview_image">Preview</string>
+    <string name="upload_camera_take">Buka Kamera</string>
+    <string name="upload_gallery_image">Ambil dari Gallery</string>
+    <string name="upload_deskripsi_image">Deskripsi</string>
+    <string name="upload_lokasi_image">Lokasi</string>
+    <string name="upload_tanggal_image">Tanggal</string>
+    <string name="upload_button">Upload</string>
+    <string name="upload_cancel">Cancel</string>
+    <string name="upload_tanggal_pilih">Masukkan Tanggal</string>
+
+    // Camera Activity
+    <string name="capture_image">Ambil Gambar</string>
+    <string name="switch_camera">Ganti Kamera</string>
+    <string name="choose_picture">Pilih Photo</string>
+    <string name="camera_back">isBackCamera</string>
+    <string name="camera_permission_error">Don\'t have any permission using Camera.</string>
+    <string name="camera_failed_picture">Failed to take a picture</string>
+    <string name="camera_error">Failed to show camera</string>
+
+    <string name="file_picture">picture</string>
+
+    <string name="maps_location_error">Can`t retrieve your location. Please enable your GPS</string>
+
+    <string name="retrofit_instance_failed">Failed instance Retrofit</string>
+    <string name="retrofit_failed_image">Please insert a picture file first!</string>
+
+    // List Report Activity
+    <string name="list_camera_report">Camera Report</string>
+    <string name="list_name_report">Dilaporkan oleh:</string>
+    <string name="list_location_report">Lokasi:</string>
+    <string name="list_date_report">Tanggal:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

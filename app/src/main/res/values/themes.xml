@@ -1,6 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PemetaEngineeringSystem" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.PemetaEngineeringSystem" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color.
         <item name="colorPrimary">@color/orange_500</item>-->
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -27,7 +28,7 @@
 
     </style>
 
-    <style name="Theme.PemetaEngineeringSystem.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.PemetaEngineeringSystem.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
     <style name="Theme.PemetaEngineeringSystem.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
