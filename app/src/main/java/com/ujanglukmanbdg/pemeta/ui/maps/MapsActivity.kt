@@ -1,12 +1,17 @@
 package com.ujanglukmanbdg.pemeta.ui.maps
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.paging.ExperimentalPagingApi
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -18,6 +23,8 @@ import com.ujanglukmanbdg.pemeta.R
 import com.ujanglukmanbdg.pemeta.databinding.ActivityMapsBinding
 import com.ujanglukmanbdg.pemeta.ui.home.LandingPageActivity
 
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+@ExperimentalPagingApi
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
@@ -33,7 +40,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setSupportActionBar(toolbar)
 
-        supportActionBar?.apply {}
+        supportActionBar?.apply {
+            elevation = 0f
+            setDisplayHomeAsUpEnabled(true)
+        }
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -112,5 +122,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 super.onOptionsItemSelected(item)
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

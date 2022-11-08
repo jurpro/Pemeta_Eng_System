@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.ujanglukmanbdg.pemeta.ui.home.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
         android:id="@+id/navigation_direksi"
         android:name="com.ujanglukmanbdg.pemeta.ui.home.ui.direksi.DireksiFragment"
         android:label="@string/title_direksi"
@@ -28,4 +22,11 @@
         android:name="com.ujanglukmanbdg.pemeta.ui.home.ui.locations.LocationsFragment"
         android:label="@string/title_locations"
         tools:layout="@layout/fragment_locations" />
+
+    <fragment
+        android:id="@+id/navigation_system"
+        android:name="com.ujanglukmanbdg.pemeta.ui.home.ui.dashboard.DashboardFragment"
+        android:label="@string/title_system"
+        tools:layout="@layout/fragment_dashboard" />
+
 </navigation>

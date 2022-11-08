@@ -23,11 +23,6 @@ class CompanyProfileActivity : AppCompatActivity() {
             title = resources.getString(R.string.company_profile_title)
         }
 
-       // companyProfilePdf = binding.companyProfilePdf
-
-      //  companyProfilePdf.fromAsset("pengalaman_perusahaan.pdf")
-       //     .swipeVertical(true)
-         //   .load()
     }
 
     companion object {

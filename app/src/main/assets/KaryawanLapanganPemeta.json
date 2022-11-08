@@ -1,0 +1,38 @@
+{
+    "departement": {
+        "name": "Pengawasan",
+        "location": "Jembatan"
+    },
+    "employees": [
+        {
+            "id": 1,
+            "name": "Lukmanul Hakim", 
+            "photo": "R.drawable.personil_lukmanul_hakim",
+            "jabatan": "Site Engineer",
+            "alamat": "Jl. Terusan Pesantren No. 76 Blk",
+            "email": "ujanglukmanbdg@gmail.com",
+            "contact": "08111117777111",
+            "kotaPenempatan": "Kab. Tasikmalaya dan Kab. Garut Prov. Jawa Barat",
+            "satkerPenempatan": "P2JN Prov. Jawa Barat",
+            "tugasPekerjaan": "PW 18–2022, Pengawasan Teknis Penggantian Jembatan Cilangla Cs",
+            "perusahaanKontrak": "PT. Pemeta Engineering System KSO PT. Seecons PT. Jasa Mitra Manunggal",
+            "mobilisasi": "15 Desember 2022",
+            "demobilisasi": "24 Mei 2024"
+        },
+        {
+            "id": 2,
+            "name": "Tito Irianto, ST., MT.", 
+            "photo": "R.drawable.personil_tito_irianto",
+            "jabatan": "Team Leader",
+            "alamat": "Jl. Tongkeng No. 17 Bandung",
+            "email": "titoirianto@gmail.com",
+            "contact": "081111178871711",
+            "kotaPenempatan": "Kab. Tasikmalaya dan Kab. Garut Prov. Jawa Barat",
+            "satkerPenempatan": "P2JN Prov. Jawa Barat",
+            "tugasPekerjaan": "PW 18–2022, Pengawasan Teknis Penggantian Jembatan Cilangla Cs",
+            "perusahaanKontrak": "PT. Pemeta Engineering System KSO PT. Seecons PT. Jasa Mitra Manunggal",
+            "mobilisasi": "15 Desember 2022",
+            "demobilisasi": "24 Mei 2024"
+        }
+    ]
+}

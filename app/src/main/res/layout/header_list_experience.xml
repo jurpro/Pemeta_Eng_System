@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/list_experience_logo_pemeta"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logo_pemeta_2022_hitam"
+        android:contentDescription="@string/company_full_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/list_experience_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company_full_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/asap_condensed_regular"
+        app:layout_constraintTop_toBottomOf="@id/list_experience_logo_pemeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/list_experience_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/asap_condensed_regular"
+        android:text="@string/list_pengalaman_title"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/list_experience_company_name"
+        app:layout_constraintStart_toStartOf="@id/list_experience_company_name"
+        app:layout_constraintTop_toBottomOf="@id/list_experience_company_name" />
+
+    <TextView
+        android:id="@+id/list_experience_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/abadi_mt_condensed"
+        android:text="@string/list_pengalaman_description"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_experience_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
