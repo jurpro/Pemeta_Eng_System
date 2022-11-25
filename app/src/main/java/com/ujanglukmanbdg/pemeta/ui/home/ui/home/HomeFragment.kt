@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.PengalamanPemeta
+import com.ujanglukmanbdg.pemeta.data.pusat.PengalamanPemeta
 import com.ujanglukmanbdg.pemeta.databinding.FragmentHomeBinding
 import com.ujanglukmanbdg.pemeta.ui.detail.experience.DetailExperienceActivity
 import com.ujanglukmanbdg.pemeta.ui.detail.profile.CompanyProfileActivity

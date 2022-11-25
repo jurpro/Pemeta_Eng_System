@@ -1,21 +1,30 @@
 package com.ujanglukmanbdg.pemeta.ui.splash
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.paging.ExperimentalPagingApi
 import com.ujanglukmanbdg.pemeta.R
 import com.ujanglukmanbdg.pemeta.databinding.ActivitySplashScreenBinding
+import com.ujanglukmanbdg.pemeta.ui.home.LandingPageActivity
 import com.ujanglukmanbdg.pemeta.ui.main.MainActivity
+import com.ujanglukmanbdg.pemeta.ui.sistempemeta.DashboardSistemActivity
 import com.ujanglukmanbdg.pemeta.ui.welcome.WelcomeActivity
 
 /**
  * Created by Lukmanul Hakim on 30/07/2022.
  * Twitter account @ArifLukmanBdg
+ * NIM 041169934 - Universitas Terbuka - 2022.2
  */
 
-// private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+@ExperimentalPagingApi
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
     var settings: SharedPreferences?= null
@@ -42,11 +51,11 @@ class SplashScreenActivity : AppCompatActivity() {
                     if (settings!!.getString("first", "0") == "0") {
                         editor!!.putString("first", "1")
                         editor!!.apply()
-                        val i = Intent(baseContext, MainActivity::class.java)
+                        val i = Intent(baseContext, DashboardSistemActivity::class.java)
                         startActivity(i)
                         finish()
                     } else {
-                        val i = Intent(baseContext, WelcomeActivity::class.java)
+                        val i = Intent(baseContext, DashboardSistemActivity::class.java)
                         startActivity(i)
                         finish()
                     }
