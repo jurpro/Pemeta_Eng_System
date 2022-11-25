@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_viewSearch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:cardCornerRadius="15dp"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardBackgroundColor="@color/material_dynamic_secondary90"
+    android:elevation="14dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/detail_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:gravity="start"
+            android:text="@string/tugas_pekerjaan_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/personil_detail_pekerjaan_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/detail_personil_pekerjaan"
+            android:src="@drawable/ic_tugas_man_construction_worker_svgrepo_com_2"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_pekerjaan"
+            card_view:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/personil_detail_pekerjaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_pekerjaan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/detail_title_text" />
+
+        <TextView
+            android:id="@+id/personil_detail_pekerjaan_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_pekerjaan"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:flow_verticalAlign="top"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_pekerjaan" />
+
+        <ImageView
+            android:id="@+id/personil_detail_penempatan_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tugas_placeholder_job_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_penempatan"
+            android:contentDescription="@string/detail_personil_penempatan" />
+
+        <TextView
+            android:id="@+id/personil_detail_penempatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_penempatan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_pekerjaan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_penempatan_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_penempatan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_penempatan" />
+
+        <ImageView
+            android:id="@+id/personil_detail_satker_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tugas_office_building_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_satker"
+            android:contentDescription="@string/detail_personil_satker" />
+
+        <TextView
+            android:id="@+id/personil_detail_satker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_satker"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_penempatan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_satker_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_satker"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_satker" />
+
+        <ImageView
+            android:id="@+id/personil_detail_perusahaan_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tugas_road_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_perusahaan"
+            android:contentDescription="@string/detail_personil_perusahaan_rekanan" />
+
+        <TextView
+            android:id="@+id/personil_detail_perusahaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_perusahaan_rekanan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_satker_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_perusahaan_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_perusahaan_rekanan"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_perusahaan" />
+
+        <ImageView
+            android:id="@+id/personil_detail_mobilisasi_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tugas_calendar_date_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_mobilisasi"
+            android:contentDescription="@string/detail_personil_mobilisasi" />
+
+        <TextView
+            android:id="@+id/personil_detail_mobilisasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_mobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_perusahaan_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_mobilisasi_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_mobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_mobilisasi" />
+
+        <ImageView
+            android:id="@+id/personil_detail_demobilisasi_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tugas_calendar_date_svgrepo_com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toTopOf="@id/personil_detail_demobilisasi"
+            android:contentDescription="@string/detail_personil_demobilisasi" />
+
+        <TextView
+            android:id="@+id/personil_detail_demobilisasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_personil_demobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_mobilisasi_teks" />
+
+        <TextView
+            android:id="@+id/personil_detail_demobilisasi_teks"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="left"
+            android:text="@string/detail_personil_demobilisasi"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline10"
+            app:layout_constraintTop_toBottomOf="@id/personil_detail_demobilisasi" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="65dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

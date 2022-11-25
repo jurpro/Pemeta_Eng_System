@@ -4,123 +4,419 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pemeta_hut_ri_77_resize"
+    android:background="@drawable/pemeta_hut_ri_77_mypemeta"
     tools:context=".ui.sistempemeta.DashboardSistemActivity">
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_absensi"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="150dp"
-        android:text="@string/sistem_pemeta_absen"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_harian"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/sistem_pemeta_lapor_hari"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_absensi"
-        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_absensi"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_absensi" />
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_bulan"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/sistem_pemeta_lapor_bulan"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_harian"
-        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_harian"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_harian" />
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_triwulan"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/sistem_pemeta_lapor_triwulan"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_bulan"
-        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_bulan"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_bulan" />
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_surat"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/sistem_pemeta_request_surat"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_triwulan"
-        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_triwulan"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_triwulan" />
-
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_cetak"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/sistem_pemeta_cetak"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_surat"
-        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_surat"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_surat" />
 
     <TextView
         android:id="@+id/sistem_pemeta_dashboard_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/sistem_pemeta_name"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="28sp"
+        android:layout_marginTop="150dp"
         android:fontFamily="@font/asap_condensed_bold"
+        android:text="@string/sistem_pemeta_name"
+        android:textColor="#F3E5F5"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_cetak" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_back"
+    <TextView
+        android:id="@+id/sistem_pemeta_dashboard_sub_sistem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="center"
-        android:text="@string/sistem_pemeta_back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="@string/sistem_pemeta_sub_system"
+        android:textColor="#3E2723"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_title"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_title"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_title" />
 
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_home"
+    <ImageView
+        android:id="@+id/sistem_pemeta_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/sistem_pemeta_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_sub_sistem"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/sistem_pemeta_nama_personil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="center"
-        android:text="@string/sistem_pemeta_home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_dashboard_back"
-        app:layout_constraintEnd_toStartOf="@id/sistem_pemeta_dashboard_logout"/>
+        android:layout_marginStart="16dp"
+        android:text="@string/sistem_pemeta_nama"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/sistem_pemeta_photo"
+        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_photo"
+        app:layout_constraintTop_toTopOf="@id/sistem_pemeta_photo" />
 
-    <Button
-        android:id="@+id/sistem_pemeta_dashboard_logout"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_absensi_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_absensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_absen"
+                android:src="@drawable/ic_desk_clock_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_absensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_absen"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_absensi"
+                app:layout_constraintStart_toStartOf="@id/icon_absensi"
+                app:layout_constraintTop_toBottomOf="@id/icon_absensi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_lapor_harian_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@id/sistem_pemeta_dashboard_report_icon"
+        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_dashboard_absensi_icon"
+        app:layout_constraintTop_toBottomOf="@id/guideline6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_lapor_harian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_upload"
+                android:src="@drawable/ic_upload_arrow_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_lapor_harian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_upload"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_lapor_harian"
+                app:layout_constraintStart_toStartOf="@id/icon_lapor_harian"
+                app:layout_constraintTop_toBottomOf="@id/icon_lapor_harian" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_report_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_cek_upload"
+                android:src="@drawable/ic_searching_for_home_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_cek_upload"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_report"
+                app:layout_constraintStart_toStartOf="@id/icon_report"
+                app:layout_constraintTop_toBottomOf="@id/icon_report" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_pekerjaan_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_absensi_icon"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_absensi_icon"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_absensi_icon">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_pekerjaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_penugasan"
+                android:src="@drawable/ic_identity_card_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_pekerjaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_penugasan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_pekerjaan"
+                app:layout_constraintStart_toStartOf="@id/icon_pekerjaan"
+                app:layout_constraintTop_toBottomOf="@id/icon_pekerjaan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_profile_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_lapor_harian_icon"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_lapor_harian_icon"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_lapor_harian_icon">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_profile"
+                android:src="@drawable/ic_user_with_tie_and_glasses_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_profile"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_profile"
+                app:layout_constraintStart_toStartOf="@id/icon_profile"
+                app:layout_constraintTop_toBottomOf="@id/icon_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_logout_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_report_icon"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_report_icon"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_report_icon">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_logout"
+                android:src="@drawable/ic_gnome_session_logout_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_logout"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_logout"
+                app:layout_constraintStart_toStartOf="@id/icon_logout"
+                app:layout_constraintTop_toBottomOf="@id/icon_logout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sistem_pemeta_dashboard_back_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@id/sistem_pemeta_dashboard_report_icon"
+        app:layout_constraintStart_toStartOf="@id/sistem_pemeta_dashboard_report_icon"
+        app:layout_constraintTop_toBottomOf="@id/sistem_pemeta_dashboard_report_icon">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/sistem_pemeta_profile"
+                android:src="@drawable/ic_home_svgrepo_com"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sistem_pemeta_home"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/icon_back"
+                app:layout_constraintStart_toStartOf="@id/icon_back"
+                app:layout_constraintTop_toBottomOf="@id/icon_back" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="365dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="156dp" />
+
+    <TextView
+        android:id="@+id/sistem_pemeta_copyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:gravity="center"
-        android:text="@string/sistem_pemeta_logout"
+        android:text="@string/welcome_version"
+        android:textColor="@color/material_dynamic_secondary10"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sistem_pemeta_dashboard_home" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/material_dynamic_primary50"
             app:popupTheme="@style/Theme.PemetaEngineeringSystem.PopupOverlay" >
 
             <ImageView
@@ -70,14 +70,17 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_email_bottom"
+        android:id="@+id/fab_email_system"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:srcCompat="@drawable/ic_system_unit_svgrepo_com"
         app:layout_anchor="@id/nav_view"
-        app:srcCompat="@android:drawable/ic_dialog_email"
         android:contentDescription="@string/login_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--app:layout_anchor="@id/nav_view" -->
 
 <!--
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

@@ -8,15 +8,6 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
-
-    <item
-        android:id="@+id/navigation_placeholder"
-        android:title="" />
-
-    <item
         android:id="@+id/navigation_direksi"
         android:icon="@drawable/ic_business_human_svgrepo_com"
         android:title="@string/title_direksi" />
@@ -25,5 +16,14 @@
         android:id="@+id/navigation_locations"
         android:icon="@drawable/ic_maps_mark_symbol_svgrepo_com"
         android:title="@string/title_locations" />
+
+    <item
+        android:id="@+id/navigation_system"
+        android:icon="@drawable/ic_contact_form_svgrepo_com"
+        android:title="@string/title_contact" />
+
+    <item
+        android:id="@+id/navigation_placeholder"
+        android:title="" />
 
 </menu>

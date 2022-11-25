@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/pemeta_hut_ri_77_nologo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sistempemeta.laporan.DetailLaporanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/detail_laporan_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.PemetaEngineeringSystem.AppBarOverlay">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/material_dynamic_primary60"
+            app:popupTheme="@style/Theme.PemetaEngineeringSystem.PopupOverlay"
+            app:titleCentered="true"
+            app:subtitleCentered="true"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detail_laporan_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_laporan_toolbar">
+
+        <ImageView
+            android:id="@+id/detail_laporan_image_picture"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_photo_camera_svgrepo_com"
+            android:contentDescription="@string/capture_image"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detail_laporan_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:elevation="14dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_laporan_image">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detail_laporan_information_dilaporkan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/list_name_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_laporan_information_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_name_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toEndOf="@id/guideline12"
+                app:layout_constraintTop_toTopOf="@+id/detail_laporan_information_dilaporkan" />
+
+            <TextView
+                android:id="@+id/detail_laporan_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:text="@string/list_job_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@id/detail_laporan_information_dilaporkan"
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_dilaporkan" />
+
+            <TextView
+                android:id="@+id/detail_laporan_information_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:text="@string/list_job_report"
+                android:textSize="16sp"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@id/detail_laporan_information_name"
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_name" />
+
+            <TextView
+                android:id="@+id/detail_laporan_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:text="@string/list_description_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@id/detail_laporan_job"
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_job" />
+
+            <TextView
+                android:id="@+id/detail_laporan_information_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:text="@string/list_description_report"
+                android:textSize="16sp"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@id/detail_laporan_information_job"
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_job" />
+
+            <TextView
+                android:id="@+id/detail_laporan_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_location_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@+id/detail_laporan_description"
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_description" />
+
+            <TextView
+                android:id="@+id/detail_laporan_information_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_location_report"
+                android:textSize="16sp"
+                android:transitionName="nameStory"
+                app:layout_constraintStart_toStartOf="@+id/detail_laporan_information_description"
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_information_description" />
+
+            <TextView
+                android:id="@+id/detail_laporan_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start|left"
+                android:text="@string/list_date_report"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:transitionName="nameStory"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/detail_laporan_location"
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_location" />
+
+            <TextView
+                android:id="@+id/detail_laporan_information_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="start|left"
+                android:text="@string/list_date_report"
+                android:textSize="16sp"
+                android:transitionName="nameStory"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/detail_laporan_information_location"
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_information_location" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="145dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/detail_laporan_map_locations"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detail_laporan_information"
+        tools:context=".ui.maps.MapsActivity" />
+
+    <TextView
+        android:id="@+id/detail_laporan_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/welcome_version"
+        android:textColor="@color/material_dynamic_primary10"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--
+    <LinearLayout
+        android:id="@+id/detail_laporan_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/detail_laporan_information"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_laporan_map_locations"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="325dp"
+            android:layout_height="350dp"
+            tools:context=".ui.sistempemeta.laporan.DetailLaporanActivity"
+            tools:layout="@layout/activity_maps" />
+
+    </LinearLayout> -->
+
+    <!--
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/detail_laporan_map_locations"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="325dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/detail_laporan_information"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:context=".ui.sistempemeta.laporan.DetailLaporanActivity"
+        tools:layout="@layout/activity_maps" />
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_image_story" />
+
+    <TextView
+        android:id="@+id/detail_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description_story"
+        android:textSize="18sp"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/detail_name"
+        app:layout_constraintTop_toBottomOf="@+id/detail_name" />
+
+    <TextView
+        android:id="@+id/detail_create_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/created_time"
+        android:textSize="18sp"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@+id/detail_description"
+        app:layout_constraintStart_toStartOf="@id/detail_description"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/detail_button_back"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:text="@string/back_to_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toEndOf="@id/detail_button_story"
+        app:layout_constraintTop_toBottomOf="@id/detail_create_at"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <Button
+        android:id="@+id/detail_button_story"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:text="@string/create_story"
+        app:layout_constraintBottom_toBottomOf="@id/detail_button_back"
+        app:layout_constraintEnd_toStartOf="@+id/detail_button_back"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/detail_button_back"
+        app:layout_constraintVertical_bias="0.342" /> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
