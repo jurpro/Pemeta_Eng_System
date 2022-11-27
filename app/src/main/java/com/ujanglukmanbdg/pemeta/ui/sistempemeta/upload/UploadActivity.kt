@@ -7,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
-import android.graphics.Camera
 import android.location.Location
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -23,23 +22,19 @@ import androidx.core.content.ContextCompat
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.lifecycle.ViewModelProvider
 import androidx.paging.ExperimentalPagingApi
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.DataStories
-import com.ujanglukmanbdg.pemeta.data.ListReportItem
+import com.ujanglukmanbdg.pemeta.data.database.response.DataReport
 import com.ujanglukmanbdg.pemeta.databinding.ActivityUploadBinding
-import com.ujanglukmanbdg.pemeta.datastories.UserPreference
 import com.ujanglukmanbdg.pemeta.datastories.reduceFileImage
 import com.ujanglukmanbdg.pemeta.datastories.rotateBitmap
 import com.ujanglukmanbdg.pemeta.datastories.uriToFile
 import com.ujanglukmanbdg.pemeta.retrofit.ApiConfig
-import com.ujanglukmanbdg.pemeta.ui.main.MainActivity
-import com.ujanglukmanbdg.pemeta.ui.main.ViewModelFactory
 import com.ujanglukmanbdg.pemeta.ui.sistempemeta.DashboardSistemActivity
 import com.ujanglukmanbdg.pemeta.ui.sistempemeta.camera.CameraActivity
+import com.ujanglukmanbdg.pemeta.ui.sistempemeta.laporan.ListLaporanActivity
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -51,7 +46,6 @@ import retrofit2.Response
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
-import javax.xml.datatype.DatatypeConstants.MONTHS
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 @ExperimentalPagingApi
@@ -87,6 +81,11 @@ class UploadActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         }
 
+        buttonClickAction()
+
+    }
+
+    private fun buttonClickAction() {
         binding.uploadButtonCamera.setOnClickListener {
             startCameraX()
         }
@@ -94,10 +93,10 @@ class UploadActivity : AppCompatActivity() {
             startGallery()
         }
 
-        /*
         binding.uploadButtonUpload.setOnClickListener {
             uploadImage()
-        } */
+        }
+
         binding.uploadButtonCancel.setOnClickListener{
             switchToDashboardSistemActivity()
         }
@@ -205,7 +204,6 @@ class UploadActivity : AppCompatActivity() {
         }
     }
 
-    /*
     private fun uploadImage() {
         if (getFileImage != null) {
             val file = reduceFileImage(getFileImage as File)
@@ -217,29 +215,29 @@ class UploadActivity : AppCompatActivity() {
 
             val service = ApiConfig.getApiService().postStory("Bearer $token", description, imageMultipart, lat, lon)
 
-            service.enqueue(object : Callback<DataStories> {
+            service.enqueue(object : Callback<DataReport> {
                 override fun onResponse(
-                    call: Call<DataStories>,
-                    response: Response<DataStories>
+                    call: Call<DataReport>,
+                    response: Response<DataReport>
                 ) {
                     if (response.isSuccessful) {
                         val responseBody = response.body()
                         if ((responseBody != null) && !responseBody.error) {
-                            Toast.makeText(this, responseBody.message, Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, DashboardSistemActivity::class.java))
+                            Toast.makeText(this@UploadActivity, responseBody.message, Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this@UploadActivity, ListLaporanActivity::class.java))
                         }
                     } else {
-                        Toast.makeText(this, response.message(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@UploadActivity, response.message(), Toast.LENGTH_SHORT).show()
                     }
                 }
-                override fun onFailure(call: Call<DataStories>, t: Throwable) {
-                    Toast.makeText(this, resources.getString(R.string.retrofit_instance_failed), Toast.LENGTH_SHORT).show()
+                override fun onFailure(call: Call<DataReport>, t: Throwable) {
+                    Toast.makeText(this@UploadActivity, resources.getString(R.string.retrofit_instance_failed), Toast.LENGTH_SHORT).show()
                 }
             })
         } else {
             Toast.makeText(this, resources.getString(R.string.retrofit_failed_image), Toast.LENGTH_SHORT).show()
         }
-    } */
+    }
 
     @SuppressLint("MissingPermission")
     private fun getMyLastLocation() {

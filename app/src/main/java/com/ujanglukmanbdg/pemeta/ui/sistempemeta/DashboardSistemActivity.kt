@@ -96,13 +96,6 @@ class DashboardSistemActivity: AppCompatActivity() {
             lapanganAlamatKtp = resources.getString(R.string.detail_personil_lapangan_alamat),
             lapanganEmail = resources.getString(R.string.detail_personil_lapangan_email),
             lapanganContact = resources.getString(R.string.detail_personil_lapangan_contact),
-
-            lapanganKotaPenempatan = resources.getString(R.string.detail_personil_lapangan_penempatan),
-            lapanganSatkerPenempatan = resources.getString(R.string.detail_personil_lapangan_satker),
-            lapanganTugasPekerjaan = resources.getString(R.string.detail_personil_lapangan_pekerjaan),
-            lapanganPerusahaanKontrak= resources.getString(R.string.detail_personil_lapangan_perusahaan),
-            lapanganMobilisasi= resources.getString(R.string.detail_personil_lapangan_mobilisasi),
-            lapanganDemobilisasi= resources.getString(R.string.detail_personil_lapangan_demobilisasi),
         )
 
         val profileDetailIntent = Intent(this@DashboardSistemActivity, DetailPersonilActivity::class.java)

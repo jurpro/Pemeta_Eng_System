@@ -15,14 +15,12 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.lapangan.PhotoLaporan
 import com.ujanglukmanbdg.pemeta.data.lapangan.PhotoLaporanStatis
 import com.ujanglukmanbdg.pemeta.databinding.ActivityDetailLaporanBinding
-import com.ujanglukmanbdg.pemeta.ui.sistempemeta.pekerjaan.TugasPekerjaanActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 @ExperimentalPagingApi
-class DetailLaporanActivity : AppCompatActivity(), OnMapReadyCallback {
+class DetailLaporanStatisActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var binding: ActivityDetailLaporanBinding
     private lateinit var mMap: GoogleMap
 
@@ -42,12 +40,26 @@ class DetailLaporanActivity : AppCompatActivity(), OnMapReadyCallback {
             setDisplayHomeAsUpEnabled(true)
         }
 
+        // Untuk Data Statis
+        setDetailReportStatis()
+
         // Untuk menampilkan maps
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.detail_laporan_map_locations) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        detailReportView()
+    }
+
+    private fun setDetailReportStatis() {
+        val datareport = intent.getParcelableExtra<PhotoLaporanStatis>(EXTRA_JOB_STATIS) as PhotoLaporanStatis
+        Log.d("Detail data ", datareport.photoStatis)
+
+        binding.detailLaporanImagePicture.setImageResource(datareport.photoStatis.toInt())
+        binding.detailLaporanInformationName.text = datareport.nameStatis
+        binding.detailLaporanInformationJob.text = datareport.jobStatis
+        binding.detailLaporanInformationDescription.text = datareport.descriptionStatis
+        binding.detailLaporanInformationLocation.text = datareport.locationStatis
+        binding.detailLaporanInformationDate.text = datareport.dateStatis
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -62,7 +74,7 @@ class DetailLaporanActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         // Add a marker in Pemeta and move the camera
-
+        /*
         val cilanglaBridge = LatLng(-7.7747237, 108.1156845)
 
         mMap.addMarker(
@@ -73,9 +85,8 @@ class DetailLaporanActivity : AppCompatActivity(), OnMapReadyCallback {
                 .visible(true)
         )
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cilanglaBridge, 16F))
-        mMap.isTrafficEnabled = false
+        mMap.isTrafficEnabled = false */
 
-/*
         // Untuk data Statis
         val datareport = intent.getParcelableExtra<PhotoLaporanStatis>(EXTRA_JOB_STATIS) as PhotoLaporanStatis
         Log.d("Detail map ", datareport.latStatis)
@@ -94,20 +105,6 @@ class DetailLaporanActivity : AppCompatActivity(), OnMapReadyCallback {
         )
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dataStatisMap, 16F))
         mMap.isTrafficEnabled = false
-*/
-    }
-
-    private fun detailReportView() {
-        val dataLaporanKaryawan = intent.getParcelableExtra<PhotoLaporan>(
-            TugasPekerjaanActivity.EXTRA_REPORT_DETAIL
-        ) as PhotoLaporan
-
-        binding.detailLaporanImagePicture.setImageResource(dataLaporanKaryawan.uploadPhoto)
-        binding.detailLaporanInformationName.text = dataLaporanKaryawan.uploadName
-        binding.detailLaporanInformationJob.text = dataLaporanKaryawan.uploadJob
-        binding.detailLaporanInformationDescription.text = dataLaporanKaryawan.uploadDescription
-        binding.detailLaporanInformationLocation.text = dataLaporanKaryawan.uploadLocation
-        binding.detailLaporanInformationDate.text = dataLaporanKaryawan.uploadDate
     }
 
     override fun onSupportNavigateUp(): Boolean {

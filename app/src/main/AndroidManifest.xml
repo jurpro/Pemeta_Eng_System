@@ -40,11 +40,18 @@
         android:theme="@style/Theme.PemetaEngineeringSystem"
         tools:targetApi="31">
         <activity
+            android:name=".DetailLaporanStatisActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.sistempemeta.laporan.DetailLaporanActivity"
             android:configChanges="orientation"
+            android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false">
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

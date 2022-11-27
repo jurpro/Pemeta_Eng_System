@@ -63,14 +63,15 @@ class TugasPekerjaanActivity : AppCompatActivity() {
 
     private fun detailOnClick() {
         val dataLaporanKaryawan = PhotoLaporan (
-            uploadPhoto = R.drawable.slideshow_01,
+            id = 1,
+            uploadPhoto = R.drawable.jembatan_proyek_tepus_20221018_143350,
             uploadName = resources.getString(R.string.detail_report_name),
             uploadJob = resources.getString(R.string.detail_report_job),
             uploadDescription= resources.getString(R.string.detail_report_description),
             uploadLocation= resources.getString(R.string.detail_report_location),
-            uploadDate= resources.getString(R.string.detail_report_date), /*
+            uploadDate= resources.getString(R.string.detail_report_date),
             lat= resources.getString(R.string.detail_report_lat),
-            lang= resources.getString(R.string.detail_report_lang) */
+            lon= resources.getString(R.string.detail_report_lon)
         )
 
         val dataLaporanIntent = Intent(this@TugasPekerjaanActivity, DetailLaporanActivity::class.java)

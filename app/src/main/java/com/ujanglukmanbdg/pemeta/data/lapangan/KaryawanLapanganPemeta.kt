@@ -11,10 +11,4 @@ data class KaryawanLapanganPemeta(
     var lapanganAlamatKtp: String,
     var lapanganEmail: String,
     var lapanganContact: String,
-    var lapanganKotaPenempatan: String,
-    var lapanganSatkerPenempatan: String,
-    var lapanganTugasPekerjaan: String,
-    var lapanganPerusahaanKontrak: String,
-    var lapanganMobilisasi: String,
-    var lapanganDemobilisasi: String,
 ): Parcelable

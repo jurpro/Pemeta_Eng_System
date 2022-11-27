@@ -1,8 +1,8 @@
 package com.ujanglukmanbdg.pemeta.retrofit
 
-import com.ujanglukmanbdg.pemeta.data.DataStories
-import com.ujanglukmanbdg.pemeta.data.LoginResponse
-import com.ujanglukmanbdg.pemeta.data.ResultResponse
+import com.ujanglukmanbdg.pemeta.data.database.response.LoginResponse
+import com.ujanglukmanbdg.pemeta.data.database.response.ResultResponse
+import com.ujanglukmanbdg.pemeta.data.database.response.DataReport
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -32,17 +32,17 @@ interface ApiService {
         @Part photo: MultipartBody.Part,
         @Part("lat") lat: Float?,
         @Part("lon") lon: Float?,
-    ): Call<DataStories>
+    ): Call<DataReport>
 
     @GET("stories?location=1")
     fun getStories(
         @Header("Authorization") token: String,
-    ): Call<DataStories>
+    ): Call<DataReport>
 
     @GET("stories?location=0")
     suspend fun getAllStories(
         @Header("Authorization") token: String,
         @Query("page") page: Int,
         @Query("size") size: Int
-    ) : DataStories
+    ) : DataReport
 }

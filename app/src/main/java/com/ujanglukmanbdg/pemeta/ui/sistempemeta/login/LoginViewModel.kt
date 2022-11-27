@@ -3,8 +3,8 @@ package com.ujanglukmanbdg.pemeta.ui.sistempemeta.login
 import android.content.Context
 import androidx.lifecycle.*
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.LoginResponse
-import com.ujanglukmanbdg.pemeta.data.UserModelStory
+import com.ujanglukmanbdg.pemeta.data.database.response.LoginResponse
+import com.ujanglukmanbdg.pemeta.data.database.model.UserModelStory
 import com.ujanglukmanbdg.pemeta.datastories.UserPreference
 import com.ujanglukmanbdg.pemeta.retrofit.ApiConfig
 import kotlinx.coroutines.launch
@@ -35,7 +35,7 @@ class LoginViewModel(private val pref: UserPreference) : ViewModel() {
         return pref.getUser().asLiveData()
     }
 
-    fun login(user:UserModelStory) {
+    fun login(user: UserModelStory) {
         viewModelScope.launch {
             pref.login(user)
         }

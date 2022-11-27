@@ -13,7 +13,7 @@ import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.paging.ExperimentalPagingApi
 import com.ujanglukmanbdg.pemeta.R
-import com.ujanglukmanbdg.pemeta.data.UserModelStory
+import com.ujanglukmanbdg.pemeta.data.database.model.UserModelStory
 import com.ujanglukmanbdg.pemeta.databinding.ActivityLoginBinding
 import com.ujanglukmanbdg.pemeta.datastories.UserPreference
 import com.ujanglukmanbdg.pemeta.ui.home.LandingPageActivity
