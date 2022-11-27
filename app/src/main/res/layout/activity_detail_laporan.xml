@@ -114,7 +114,7 @@
                 android:textStyle="bold"
                 android:transitionName="nameStory"
                 app:layout_constraintStart_toStartOf="@id/detail_laporan_information_dilaporkan"
-                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_dilaporkan" />
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_name" />
 
             <TextView
                 android:id="@+id/detail_laporan_information_job"
@@ -139,7 +139,7 @@
                 android:textStyle="bold"
                 android:transitionName="nameStory"
                 app:layout_constraintStart_toStartOf="@id/detail_laporan_job"
-                app:layout_constraintTop_toBottomOf="@id/detail_laporan_job" />
+                app:layout_constraintTop_toBottomOf="@id/detail_laporan_information_job" />
 
             <TextView
                 android:id="@+id/detail_laporan_information_description"
@@ -162,7 +162,7 @@
                 android:textStyle="bold"
                 android:transitionName="nameStory"
                 app:layout_constraintStart_toStartOf="@+id/detail_laporan_description"
-                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_description" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_information_description" />
 
             <TextView
                 android:id="@+id/detail_laporan_information_location"
@@ -186,7 +186,7 @@
                 android:transitionName="nameStory"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/detail_laporan_location"
-                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_location" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_laporan_information_location" />
 
             <TextView
                 android:id="@+id/detail_laporan_information_date"

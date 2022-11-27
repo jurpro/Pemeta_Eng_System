@@ -858,7 +858,7 @@
     <string name="detail_report_location">STA 17+250</string>
     <string name="detail_report_date">15 Januari 2023</string>
     <string name="detail_report_lat">-7.7747237</string>
-    <string name="detail_report_lang">108.1156845</string>
+    <string name="detail_report_lon">108.1156845</string>
 
     // Tugas Pekerjaan Activity
     <string name="tugas_pekerjaan_title">Penugasan Anda</string>
@@ -868,5 +868,65 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loading_retry">Retry</string>
+
+    // Data Report Image Statis / dummy
+    <string-array name="data_name_statis">
+        <item>Lukmanul Hakim</item>
+        <item>Lukmanul Hakim</item>
+        <item>Adi Purwanto</item>
+        <item>Adi Purwanto</item>
+        <item>Bambang Trenggono S.</item>
+    </string-array>
+    <string-array name="data_photo_statis">
+        <item>@drawable/report_statis_1_20221018_143910</item>
+        <item>@drawable/report_statis_2_20221018_143028</item>
+        <item>@drawable/report_statis_3_20221018_142729</item>
+        <item>@drawable/report_statis_4_20221018_141629</item>
+        <item>@drawable/report_statis_5_20221018_141434</item>
+    </string-array>
+    <string-array name="data_job_statis">
+        <item>PW 05: Pengawasan Pembangunan Jalan Planjan-Baron-Tepus (MYC)</item>
+        <item>PW 05: Pengawasan Pembangunan Jalan Planjan-Baron-Tepus (MYC)</item>
+        <item>PW 18–2022: Pengawasan Penggantian Jembatan Cilangla CS (MYC)</item>
+        <item>PW 18–2022: Pengawasan Penggantian Jembatan Cilangla CS (MYC)</item>
+        <item>PW 18–2022: Pengawasan Penggantian Jembatan Cilangla CS (MYC)</item>
+    </string-array>
+    <string-array name="data_description_statis">
+        <item>Pengukuran teodolit T0</item>
+        <item>Pemasangan tumbuhan pengikat dan aspal lapir ketiga</item>
+        <item>Pembersihan material sisa lapisan aspal dan beton</item>
+        <item>Pengaspalan lapis kedua</item>
+        <item>Pemasangan bronjong tebing dan pemasangan tumbuhan pengikat tanah</item>
+    </string-array>
+    <string-array name="data_location_statis">
+        <item>STA 6+250</item>
+        <item>STA 7+650</item>
+        <item>Jembatan Cimedang</item>
+        <item>Jembatan Cibening</item>
+        <item>Jembatan Cilangla</item>
+    </string-array>
+    <string-array name="data_date_statis">
+        <item>15 November 2022</item>
+        <item>15 November 2022</item>
+        <item>15 November 2022</item>
+        <item>17 November 2022</item>
+        <item>20 November 2022</item>
+    </string-array>
+    <string-array name="data_lat_statis">
+        <item>-8.1271931</item>
+        <item>-8.1277229</item>
+        <item>-7.8012982</item>
+        <item>-7.8121787</item>
+        <item>-7.7750438</item>
+    </string-array>
+    <string-array name="data_lon_statis">
+        <item>110.561821</item>
+        <item>110.5684612</item>
+        <item>108.2676371</item>
+        <item>108.3953391</item>
+        <item>108.1157736</item>
+    </string-array>
 
 </resources>
