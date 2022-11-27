@@ -132,12 +132,14 @@ dependencies {
 
     // Room
     implementation 'androidx.room:room-ktx:2.5.0-beta02'
+    implementation "androidx.room:room-runtime:2.4.3"
     kapt "androidx.room:room-compiler:2.5.0-beta02"
+    // ksp "androidx.room:room-compiler:2.5.0-beta02"
 
     // Room Database
-    implementation "androidx.room:room-rxjava3:2.4.3"
-    implementation "androidx.room:room-runtime:2.4.3"
-    kapt "androidx.room:room-compiler:2.4.3"
+    // implementation "androidx.room:room-rxjava3:2.4.3"
+    // implementation "androidx.room:room-runtime:2.4.3"
+    // kapt "androidx.room:room-compiler:2.4.3"
 
     // Paging
     implementation "androidx.paging:paging-runtime-ktx:3.1.1"
